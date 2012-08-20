@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+h1 {
+    /*font-weight: 500;*/
+}
+
+body {
+    font-family: Segoe UI Light, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+.ya-first {
+    color: red;
+}
