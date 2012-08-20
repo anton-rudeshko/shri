@@ -1,6 +1,6 @@
 (function ($) {
   $(function () {
-    $('#task-3').load("js/shri.js");
+    $('#task-3-solution-js').load("js/shri.js");
 
     SyntaxHighlighter.all();
   });
