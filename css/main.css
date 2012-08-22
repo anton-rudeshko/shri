@@ -3,24 +3,24 @@
 h1 {
     font-size: 2em;
     font-weight: bold;
-    padding: 1em;
+    padding: 0.7em;
+    text-align: center;
 }
 
 h2 {
     font-size: 1.5em;
+    margin-bottom: 0.3em;
 }
 
 h3 {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.1em;
     margin-top: 1em;
-    margin-left: 0.5em;
     margin-bottom: 0.2em;
 }
 
 h4 {
     font-weight: bold;
-    font-family: Tahoma, Arial, Verdana, sans-serif;
+    margin-bottom: 0.1em;
 }
 
 h5 {
@@ -33,7 +33,7 @@ body {
 }
 
 p {
-    margin: 0.5em 0;
+    margin-bottom: 0.5em;
     line-height: 1.3em;
 }
 
@@ -50,9 +50,9 @@ a[target="_blank"] {
 
 #content {
     max-width: 800px;
-    min-width: 200px;
+    min-width: 300px;
     margin: 0 auto;
-    border-left: 2px dashed #FEEDA0;
+    border-left: 10px dashed #FEEDA0;
     padding: 1em;
 }
 
@@ -66,8 +66,12 @@ a[target="_blank"] {
     padding: 0;
 }
 
-#header {
+#header, #footer {
     background-color: #FEEDA0;
+}
+
+#footer {
+    height: 1em;
 }
 
 .red {
@@ -90,22 +94,39 @@ a[target="_blank"] {
 }
 
 .code {
-    color: black;
-    background-color: #eee;
-    border: 1px dashed #bbb;
+    color: #444;
+    background-color: #EEE;
+    border: 1px dashed #CCC;
     min-width: 1em;
     font-family: consolas, monospace;
 }
 
-.task {
+.toggle-solution {
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+
+.task-text {
     border-left: 2px solid #bbb;
     padding-left: 10px;
     font-style: italic;
     margin: 0.5em;
 }
 
+.task-solution {
+    display: none;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin: 1em;
+    padding: 0.5em;
+}
+
 .center {
     margin: 0 auto;
+}
+
+.browsers {
+    margin-left: 1em;
 }
 
 #contacts .center {

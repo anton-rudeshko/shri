@@ -26,6 +26,9 @@
     </div>
 
     <div id="content">
+
+        <h2>Вместо вступления</h2>
+
         <div id="about">
             <p>
                 Добрый день!
@@ -43,9 +46,16 @@
             </p>
 
             <p>
+                Всё что здесь написано — целиком из моей головы на данный момент.
+                Я никуда не подглядывал и ничего не списывал.
+            </p>
+
+            <p>
                 Я постараюсь быть краток, чтобы не тратить ни своё, ни Ваше время.
             </p>
         </div>
+
+        <h2>Контакты</h2>
 
         <div id="contacts">
             <p>
@@ -54,130 +64,181 @@
 
             <div class="center">
                 <a target="_blank" href="http://www.facebook.com/anton.rudeshko">
-                    <img src="pix/facebook.jpg" alt="Я в facebook"/>
+                    <img src="pix/facebook.jpg" title="Я в facebook"/>
                 </a>
                 <a target="_blank" href="https://plus.google.com/110464613188735815859">
-                    <img src="pix/google_plus.jpg" alt="Я в google plus"/>
+                    <img src="pix/google_plus.jpg" title="Я в google plus"/>
                 </a>
                 <a target="_blank" href="https://twitter.com/404tesla">
-                    <img src="pix/twitter.jpg" alt="Я в twitter"/>
+                    <img src="pix/twitter.jpg" title="Я в twitter"/>
                 </a>
-                <img src="pix/vk.jpg" alt="Меня нет ВКонтакте!"/>
+                <img src="pix/vk.jpg" title="Меня нет ВКонтакте!"/>
                 <a href="mailto:anton@rudeshko.com">anton@rudeshko.com</a>
                 <a target="_blank" href="http://www.rudeshko.com">www.rudeshko.com</a>
             </div>
         </div>
 
-        <div id="task-1">
+        <h2>Задачи</h2>
+
+        <div class="task">
             <h3>Задание 1</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Перечислите известные вам инструменты и приёмы для отладки кода в разных браузерах.
             </p>
 
-            <div>
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
                 <p>
-                    Я думаю, всё начиналось с <span class="code">alert("Hello world!")</span>.
+                    Я думаю, всё начиналось с <span class="code">alert()</span>.
                     Ковыряние в исходном коде, сотни всплывающих окошек + можно ещё и забыть за собой удалить.
                     Не самый удобный способ, мне кажется =)
                 </p>
 
                 <p>
+                    Затем пришёл <span class="code">console.log()</span>. Уже более современная практика, и по сей
+                    день используется в проектах в качестве client-side логгирования. В IE
+                    <span class="code">console</span> бывает <span class="code">undefined</span>, так что следует
+                    проверять заранее.
+                </p>
+
+                <p>
                     Почти во всех современных браузерах есть Developer Tools, обычно они включатся нажатием
-                    <span class="key">F12</span>.
+                    <span class="key">F12</span>. Кроме всего прочего, в дебаггер можно попасть используя ключевое
+                    слово <span class="code">debugger</span>.
                 </p>
 
-                <h4>Internet Explorer 8/9</h4>
+                <ul class="browsers">
+                    <li>
+                        <h4>Internet Explorer 8/9</h4>
+
+                        <p>
+                            Лишний раз я стараюсь не встречаться с инструментами разработчика для пользователей IE
+                            и писать более менее кроссбраузерный JS/CSS,
+                            но иногда приходится отлаживать код.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Google Chrome</h4>
+
+                        <p>
+                            На мой взгляд, у браузера от Google на данный момент самые продвинутые и быстро
+                            развивающиеся инструменты. Экстремально удобная отладка кода, установка брейкпоинтов
+                            на события, ajax запросы, профилирование кода и сетевого взаимодействия, манипулирование
+                            DOM, автокомплит по функциям, свойствам, селекторам. В общем, одно удовольствие.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Opera</h4>
+
+                        <p>
+                            У Оперы так же есть встроенные инструменты, <span class="title">Dragonfly</span>,
+                            но, к сожалению, я ими никогда не пользовался.
+                        </p>
+                    </li>
+                    <li>
+                        <h4>Firefox</h4>
+
+                        <p>
+                            На мой взгляд, у браузера от Google на данный момент самые продвинутые и быстро
+                            развивающиеся инструменты.
+                        </p>
+                    </li>
+                </ul>
 
                 <p>
-                    Лишний раз я стараюсь не встречаться с инструментами разработчика для пользователей IE
-                    и писать более менее кроссбраузерный JS/CSS,
-                    но иногда приходится отлаживать код.
-                </p>
-
-                <h4>Google Chrome</h4>
-
-                <p>
-                    На мой взгляд, у браузера от Google на данный момент самые продвинутые и быстро развивающиеся
-                    инструменты.
-                </p>
-
-                <h4>Opera</h4>
-
-                <p>
-                    У Оперы так же есть встроенные инструменты, <span class="title">Dragonfly</span>,
-                    но, к сожалению, я ими никогда не пользовался.
-                </p>
-
-                <h4>Firefox</h4>
-
-                <p>
-                    На мой взгляд, у браузера от Google на данный момент самые продвинутые и быстро развивающиеся
-                    инструменты.
+                    Конечно же, лучше всего тот код, который отлаживать не нужно. Писать юнит тесты, в JavaScript
+                    сейчас уже достаточно развита эта область, плюс интеграционные тесты с помощью фреймворков вроде
+                    <a href="http://seleniumhq.org/">Selenium</a>.
                 </p>
             </div>
         </div>
 
-        <div id="task-2">
+        <div class="task">
             <h3>Задание 2</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Опишите своими словами, что происходит в браузерах при клике на ссылку yandex.ru (полнота ответа — на
                 ваше
                 усмотрение).
             </p>
 
-            // Здесь будет картинка и текст
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
+                // Здесь будет картинка и текст
+            </div>
         </div>
 
 
-        <div id="task-3">
+        <div class="task">
             <h3>Задание 3</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Предположим, что мы представляем автосалон по продаже японских и немецких автомобилей.
                 У нас есть базовые классы и примеры их использования. Допишите недостающий код.
             </p>
 
-            <a href="js/shri.js" target="_blank">Открыть исходный код</a>
-        <pre id="task-3-solution-js" class="brush: js">
-            function foo() {
-                hello world
-            }
-        </pre>
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
+                <a href="js/shri.js" target="_blank">Открыть исходный код</a>
+                <pre id="task-3-solution-js" class="brush: js">
+                    function foo() {
+                        hello world
+                    }
+                </pre>
+            </div>
         </div>
 
-        <div id="task-4">
+        <div class="task">
             <h3>Задание 4</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Найдите все текстовые файлы (*.txt), в имени которых содержится «yandex», а в содержимом — «школа
                 разработки интерфейсов».
             </p>
+
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
+                Пока пусто
+            </div>
         </div>
 
-        <div id="task-5">
+        <div class="task">
             <h3>Задание 5</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Дана программа, реализованная одновременно на Bash, Python и Perl.
                 Программа принимает произвольное количество
                 аргументов и печатает их количество.
                 Нужно добавить опцию -v для verbose-режима, в котором дополнительно
                 выводится значение каждого из аргументов.
             </p>
+
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
+                Пока пусто
+            </div>
         </div>
 
-        <div id="task-6">
+        <div class="task">
             <h3>Задание 6</h3>
 
-            <p class="task">
+            <p class="task-text">
                 Расскажите, в каком объёме и при каких обстоятельствах вы изучали следующие темы: языки программирования
                 (императивные/декларативные, разные системы типов), структуры (классы, структуры данных, примитивные
                 типы), парадигмы (события, ООП, параллельность/асинхронность, кеширование), алгоритмы (парсинг,
                 сортировка, поиск), паттерны.
             </p>
+
+            <a class="toggle-solution" href="#">Показать решение</a>
+            <div class="task-solution">
+                Пока пусто
+            </div>
         </div>
+    </div>
+
+    <div id="footer">
+
     </div>
 </div>
 </body>
