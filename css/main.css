@@ -1,13 +1,115 @@
 @charset "utf-8";
 
 h1 {
-    /*font-weight: 500;*/
+    font-size: 2em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+h4 {
+    font-weight: bold;
+    font-family: Tahoma, Arial, Verdana, sans-serif;
+}
+
+h5 {
+
 }
 
 body {
     font-family: Segoe UI Light, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+    font-size: 1em;
 }
 
-.ya-first {
-    color: red;
+p {
+    margin: 0.5em 0;
+    line-height: 1.3em;
 }
+
+a, a:visited {
+    color: #00f;
+}
+a:active {
+    color: #f00;
+}
+a[target="_blank"] {
+    background: url("../pix/newwindow.gif") center right no-repeat;
+    padding-right: 13px;
+}
+
+#content {
+    max-width: 800px;
+    min-width: 200px;
+    margin: 0 auto;
+    border-left: 2px dashed #FEEDA0;
+    padding: 1em;
+}
+
+#contacts {
+
+}
+
+#contacts a {
+    text-decoration: none;
+    background: none;
+    padding: 0;
+}
+
+#header {
+    background-color: #FEEDA0;
+}
+
+.red {
+    color: #f00;
+}
+
+.title {
+
+}
+
+.key {
+    color: black;
+    background-color: #ddd;
+    outline: 1px solid #bbb;
+    border: 1px solid #bbb;
+    border-top-color: white;
+    border-left-color: white;
+    min-width: 1em;
+    font-family: consolas, monospace;
+}
+
+.code {
+    color: black;
+    background-color: #eee;
+    border: 1px dashed #bbb;
+    min-width: 1em;
+    font-family: consolas, monospace;
+}
+
+.task {
+    border-left: 2px solid #bbb;
+    padding-left: 10px;
+    font-style: italic;
+    margin: 0.5em;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+#contacts .center {
+    width: 270px;
+    text-align: center;
+}
+
