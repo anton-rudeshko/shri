@@ -27,6 +27,15 @@ h5 {
 
 }
 
+ol {
+    list-style: decimal;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.2em;
+}
+
 body {
     font-family: Segoe UI Light, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
     font-size: 1em;
@@ -49,7 +58,7 @@ a[target="_blank"] {
 }
 
 #content {
-    max-width: 800px;
+    max-width: 900px;
     min-width: 300px;
     margin: 0 auto;
     border-left: 10px dashed #FEEDA0;
@@ -78,8 +87,8 @@ a[target="_blank"] {
     color: #f00;
 }
 
-.title {
-
+.bold, .title {
+    font-weight: bold;
 }
 
 .key {

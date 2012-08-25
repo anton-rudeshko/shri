@@ -1,3 +1,5 @@
+var logToDocument = true;
+
 /**
  * Получить текущий год
  */
@@ -9,10 +11,15 @@ function log(msg) {
   if (console && console.log) {
     console.log(msg);
   }
+  if (logToDocument) {
+    document.write(msg + "<br/>")
+  }
 }
 
 function assertEquals(o1, o2) {
+  log("Asserting: '" + o1 + "' == '" + o2 + "'");
   if (typeof o1 == "string" && typeof o2 == "string" && o1 != o2) {
+    log("Assertion failed. Strings is not equal: '" + o1 + "' and '" + o2 + "'");
     throw "Assertion failed. Strings is not equal: '" + o1 + "' and '" + o2 + "'";
   }
 }
