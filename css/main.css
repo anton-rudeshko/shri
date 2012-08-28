@@ -149,3 +149,25 @@ a[target="_blank"] {
     text-align: center;
 }
 
+@media print {
+    .task-solution {
+        display: block;
+    }
+
+    .runnable, .toggle-solution, #print, #contacts .social, #contacts p {
+        display: none;
+    }
+
+    #content {
+        border-left: none;
+    }
+
+    a[target="_blank"] {
+        background: none;
+        padding-right: 0;
+    }
+
+    #header, #footer {
+        background-color: transparent;
+    }
+}
