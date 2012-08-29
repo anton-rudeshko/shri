@@ -8,7 +8,7 @@ function getCurrentYear() {
 }
 
 function log(msg) {
-  if (console && console.log) {
+  if (typeof console != 'undefined' && console && console.log) {
     console.log(msg);
   }
   if (logToDocument) {

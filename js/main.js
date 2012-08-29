@@ -2,7 +2,7 @@
   "use strict";
 
   $(function () {
-    $('#task-3-solution-js').load("js/shri.js");
+    $('#task-solution-3-js').load("js/shri.js");
     $('.toggle-solution').on('click', function () {
       var self = $(this);
       var solution = self.siblings('.task-solution');
@@ -12,10 +12,14 @@
         self.text(self.data('open') || 'Показать решение');
       } else {
         solution.slideDown();
-        $('html, body').animate({scrollTop: solution.offset().top}, 1000);
+        try {
+          $('html, body').animate({scrollTop: solution.offset().top}, 1000);
+        } catch (ignore) {
+          // ie fix
+        }
         self.text(self.data('close') || 'Скрыть решение');
       }
-      solution.toggleClass('open', isOpened);
+      solution.toggleClass('open', !isOpened);
       return false;
     });
 

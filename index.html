@@ -11,7 +11,6 @@
 
     <script charset="utf-8" type="text/javascript" src="js/main.js"></script>
 
-    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="css/shCore.css" rel="stylesheet" type="text/css"/>
     <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css"/>
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
@@ -25,6 +24,8 @@
     </div>
 
     <div id="content">
+
+        <a id="print" href="#">Напечатать</a>
 
         <h2>Вместо вступления</h2>
 
@@ -63,7 +64,7 @@
                 Перечислите известные вам инструменты и приёмы для отладки кода в разных браузерах.
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-1" class="task-solution">
                 <p>
                     Я думаю, всё начиналось с <span class="code">alert()</span>.
                     Ковыряние в исходном коде, сотни всплывающих окошек + можно ещё и забыть за собой удалить.
@@ -78,7 +79,8 @@
                 </p>
 
                 <p>
-                    Почти во всех современных браузерах есть очень эффективные Developer Tools, только тосты не жарят.
+                    Теперь почти во всех современных браузерах есть очень эффективные Developer Tools,
+                    которые только тосты не жарят.
                     Обычно они включатся нажатием <span class="key">F12</span>.
                     Кроме всего прочего, в дебаггер можно попасть используя ключевое
                     слово <span class="code">debugger</span>.
@@ -91,6 +93,7 @@
                         <p>
                             Лишний раз я стараюсь не встречаться с инструментами разработчика для пользователей IE
                             и писать более-менее кроссбраузерный JS/CSS, но иногда приходится отлаживать упавший код.
+                            Несмотря на не самое фантастическое удобство, функций для отладки в IE достаточно.
                         </p>
                     </li>
                     <li>
@@ -129,7 +132,10 @@
                 </p>
             </div>
 
-            <a class="toggle-solution" data-open="Показать перечисление" data-close="Спасибо, всё верно!" href="#">
+            <a class="toggle-solution"
+               data-open="Показать перечисление"
+               data-close="Спасибо, всё верно!"
+               href="#task-solution-1">
                 Показать перечисление
             </a>
         </div>
@@ -142,7 +148,7 @@
                 ваше усмотрение).
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-2" class="task-solution">
                 <ol>
                     <li>Генерируется событие наведения мыши <span class="code">mouseover</span></li>
                     <li>Применяется CSS псевдокласс <span class="code">hover</span></li>
@@ -154,16 +160,18 @@
                         <span class="code">click</span>
                     </li>
                     <li>
-                        Если событие по умолчанию для ссылок не прервано (<span class="code">e.preventDefault()</span>),
+                        Если событие по умолчанию для ссылок не прервано (<span class="code">e.preventDefault()</span>
+                        или <span class="code">return false</span>),
                         то браузер совершает переход.
                     </li>
                 </ol>
 
                 <p>
                     Касательно генерации событий: событие создаётся и спускается вниз,
-                    последовательно проходя все родительские,
-                    элементы до элемента-цели. Эта фаза называется capture фазой.
+                    последовательно проходя все родительские элементы до элемента-цели.
+                    Эта фаза называется capture фазой.
                     Затем, событие поднимается обратно вверх. Эта фаза называется bubble фазой.
+                    Можно отменить распространение события методом <span class="code">e.stopPropogation()</span>.
                 </p>
 
                 <p>
@@ -171,7 +179,10 @@
                 </p>
             </div>
 
-            <a class="toggle-solution" data-open="Показать описание" data-close="Есть замечания, но всё ок" href="#">
+            <a class="toggle-solution"
+               data-open="Показать описание"
+               data-close="Есть замечания, но всё ок"
+               href="#task-solution-2">
                 Показать описание
             </a>
 
@@ -186,17 +197,20 @@
                 У нас есть базовые классы и примеры их использования. Допишите недостающий код.
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-3" class="task-solution">
                 <a href="task3-js.html" class="runnable" target="_blank">Запустить</a>
-                <pre id="task-3-solution-js" class="brush: js">
+                <pre id="task-solution-3-js" class="brush: js gutter: false">
                     // сюда загрузим код
+                    function () {
+                        console.log("Hello Yandex!");
+                    }
                 </pre>
             </div>
 
             <a class="toggle-solution"
                data-open="Показать код"
                data-close="Хороший код, правильный и красивый!"
-               href="#">
+               href="#task-solution-3">
                 Показать код
             </a>
         </div>
@@ -209,7 +223,7 @@
                 разработки интерфейсов».
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-4" class="task-solution">
                 <p>
                     К сожалению, у меня под рукой нет линукса (если вопрос вообще про консольные утилиты линукса),
                     пробовал в онлайн консоли, русского там не было, использовал вольный перевод.
@@ -220,7 +234,10 @@
                 </span>
             </div>
 
-            <a class="toggle-solution" data-open="Показать запрос" data-close="Похоже на правду..." href="#">
+            <a class="toggle-solution"
+               data-open="Показать запрос"
+               data-close="Похоже на правду..."
+               href="#task-solution-4">
                 Показать запрос
             </a>
         </div>
@@ -236,7 +253,7 @@
                 выводится значение каждого из аргументов.
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-5" class="task-solution">
                 <p>
                     Тут мне похвастаться нечем. Поскольку с некоторых пор задания стали необязательными
                     я решил не корчить из себя знатока этих языков. Я немного разбираюсь в пайтоне, один раз
@@ -244,7 +261,10 @@
                 </p>
             </div>
 
-            <a class="toggle-solution" data-open="Показать оправдание" data-close="Эх, скрыть оправдание" href="#">
+            <a class="toggle-solution"
+               data-open="Показать оправдание"
+               data-close="Эх, скрыть оправдание"
+               href="#task-solution-5">
                 Показать оправдание
             </a>
         </div>
@@ -259,7 +279,7 @@
                 сортировка, поиск), паттерны.
             </p>
 
-            <div class="task-solution">
+            <div id="task-solution-6" class="task-solution">
                 <p>
                     Не могу сказать ничего конркретного про время, так как я стараюсь учиться и расширять свои
                     знания постоянно. Ничего не знал я про программирование только в школе (почти ничего).
@@ -333,7 +353,7 @@
 
                 <p>
                     На пятом курсе писали собственный поисковик, тормозил, но работал.
-                    Вёл разработчик из <span class="title">Mail.ru</span>
+                    Вёл глава поиска <span class="title">Mail.ru</span>.
                 </p>
 
                 <p>
@@ -343,7 +363,9 @@
 
                 <p>
                     Кеширование... ну кеширование. Я знаю что это, для чего, какие могут быть проблемы.
-                    Что тут сказать? Сам использовал нечасто, так как не работал с высоконагруженными проектами.
+                    Что тут сказать? Сам использовал нечасто, так как не работал с высоконагруженными проектами,
+                    но в вебе я считаю что умное кеширование обязательно. Однако в рабочих проектах почему-то никогда
+                    не остаётся времени на хорошую оптимизацию, только самое основное.
                 </p>
 
                 <p>
@@ -351,7 +373,10 @@
                 </p>
             </div>
 
-            <a class="toggle-solution" data-open="Показать знания!" data-close="Хорошо, спасибо" href="#">
+            <a class="toggle-solution"
+               data-open="Показать знания!"
+               data-close="Хорошо, спасибо"
+               href="#task-solution-6">
                 Показать знания!
             </a>
         </div>
@@ -383,9 +408,6 @@
                 <a target="_blank" href="http://www.rudeshko.com">www.rudeshko.com</a>
             </div>
         </div>
-        <p>
-            <a id="print" href="#">Напечатать</a>
-        </p>
     </div>
 
     <div id="footer">
